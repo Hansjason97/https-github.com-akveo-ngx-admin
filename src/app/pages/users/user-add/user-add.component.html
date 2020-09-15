@@ -1,0 +1,69 @@
+<nb-card><nb-card-header>Add a user</nb-card-header>
+    <nb-card-body class="example-items-col">
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <div class="form-group row">
+              <label for="username" class="label col-sm-3 col-form-label">Name</label>
+              <div class="col-sm-9">
+                <input type="text" nbInput fullWidth id="username" placeholder="Name" ngModel name="user_name">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="userEmail" class="label col-sm-3 col-form-label">Email</label>
+              <div class="col-sm-9">
+                <input type="email" nbInput fullWidth id="userEmail" placeholder="Email" ngModel name="user_email">
+              </div>
+            </div>
+            <div class="form-group row">
+                <label for="userPassword" class="label col-sm-3 col-form-label">Password</label>
+                <div class="col-sm-9">
+                  <input [type]="getInputType()" nbInput id="userPassword" placeholder="Password" ngModel name="user_password">
+                  <button nbSuffix nbButton ghost (click)="toggleShowPassword()">
+                    <nb-icon icon="eye-outline"
+                             pack="eva"
+                             [attr.aria-label]="showPassword ? 'hide password' : 'show password'">
+                    </nb-icon>
+                  </button>
+                </div>
+              </div>
+            <div class="form-group row">
+                <label for="userPhonePro" class="label col-sm-3 col-form-label">Professional Phone</label>
+                <div class="col-sm-9">
+                  <input type="text" nbInput fullWidth id="userPhonePro" placeholder="Phone Number" ngModel name="user_phone_professional">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="userPhoneMobile1" class="label col-sm-3 col-form-label">Mobile Phone</label>
+                <div class="col-sm-9">
+                  <input type="text" nbInput fullWidth id="userPhoneMobile1" placeholder="Phone Number" ngModel name="user_phone_Mobile1">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="userPhoneMobile2" class="label col-sm-3 col-form-label">Mobile Phone</label>
+                <div class="col-sm-9">
+                  <input type="text" nbInput fullWidth id="userPhoneMobile2" placeholder="Phone Number" ngModel name="user_phone_Mobile2">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="userfax" class="label col-sm-3 col-form-label">Fax</label>
+                <div class="col-sm-9">
+                  <input type="text" nbInput fullWidth id="userfax" placeholder="Fax" ngModel name="user_fax">
+                </div>
+              </div>
+           <!--  <div class="form-group row">
+              <label class="col-sm-3 label">Radios</label>
+              <div class="col-sm-9">
+                <nb-radio-group>
+                  <nb-radio>Option 1</nb-radio>
+                  <nb-radio>Option 2</nb-radio>
+                  <nb-radio disabled>Disabled Option</nb-radio>
+                </nb-radio-group>
+              </div>
+            </div> -->
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <button type="submit" nbButton status="primary">Add</button>
+              </div>
+            </div>
+          </form>
+    </nb-card-body>
+</nb-card>

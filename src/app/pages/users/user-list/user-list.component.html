@@ -1,0 +1,9 @@
+<nb-card size="small">
+  <nb-card-header>Users</nb-card-header>
+    <nb-list>
+      <nb-list-item *ngFor="let user of users">
+        <nb-user [title]="user.user_Unique_Id_Number" [name]="user.user_name" >
+        </nb-user>
+      </nb-list-item>
+    </nb-list>
+  </nb-card>
